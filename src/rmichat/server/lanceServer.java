@@ -30,14 +30,14 @@ public class lanceServer implements Serializable{
             try {
                 Naming.bind("Serveur", sc);
             } catch (AlreadyBoundException ex) {
-                Logger.getLogger(Server.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(lanceServer.class.getName()).log(Level.SEVERE, null, ex);
             } catch (MalformedURLException ex) {
-                Logger.getLogger(Server.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(lanceServer.class.getName()).log(Level.SEVERE, null, ex);
             }
         System.out.println("Demarrage du serveur...");
     }
         catch (RemoteException ex) {
-            Logger.getLogger(Server.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(lanceServer.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 

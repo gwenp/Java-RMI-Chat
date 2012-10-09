@@ -31,9 +31,9 @@ public class lanceClient implements Serializable{
             try {
                 cd =(ServeurChat) Naming.lookup("Serveur");
             } catch (NotBoundException ex) {
-                Logger.getLogger(Client.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(lanceClient.class.getName()).log(Level.SEVERE, null, ex);
             } catch (MalformedURLException ex) {
-                Logger.getLogger(Client.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(lanceClient.class.getName()).log(Level.SEVERE, null, ex);
             }
             cdi = new ClientDistantImpl();
             System.out.println("user?");
@@ -45,7 +45,7 @@ public class lanceClient implements Serializable{
                 envoiMsg(sc.nextLine());
             }
         } catch (RemoteException ex) {
-            Logger.getLogger(Client.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(lanceClient.class.getName()).log(Level.SEVERE, null, ex);
         }
 
     }
@@ -55,7 +55,7 @@ public class lanceClient implements Serializable{
         try {
             cd.Getmessage(msg,pseudo);
         } catch (RemoteException ex) {
-            Logger.getLogger(Client.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(lanceClient.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
